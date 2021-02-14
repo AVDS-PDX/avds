@@ -9,7 +9,7 @@ jobs:
       
       - name: install pipenv
         run: |
-          python3 -m install --upgrade pipenv wheel
+          python3 -m pip install --upgrade pipenv wheel
       
       - name: install dependencies
         run: |
