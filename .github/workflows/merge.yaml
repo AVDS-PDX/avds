@@ -22,10 +22,14 @@ jobs:
       
       - name: Extract Branch name
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        run: |
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo ${GITHUB_REF#refs/heads/}
         id: extract_branch
 
       - name: Convert docx to markdown
-        run: python3 ./.github/workflows/convert_to_md.py
+        run: |
+          pipenv shell
+          python ./.github/workflows/convert_to_md.py
     
 
