@@ -67,5 +67,5 @@ for doc in docx_docs:
     md_file_name = doc.replace("docx", "md")
     with open(md_file_name, 'w') as markdown_file:
         markdown_file.write(markdown)
-
+# minor change
 mirror_structure(repo, 'AVDS_repo_markdown', '.md') 
