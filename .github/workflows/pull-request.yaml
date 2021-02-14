@@ -31,5 +31,14 @@ jobs:
       - name: Convert docx to markdown
         run: | 
           python ./.github/workflows/convert_to_md.py
+
+      - name: Commit markdown to branch
+        run: |
+          git add .
+          git config --local user.email "commit from ${GITHUB_REF#refs/heads/}"
+          git config --local user.name "Github Actions"
+          git commit -m "convert to md"
+
+          git push origin ${GITHUB_REF#refs/heads/}
     
 
