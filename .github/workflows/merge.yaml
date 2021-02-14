@@ -1,0 +1,10 @@
+jobs:
+  convert-to-markdown:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      - name: Convert docx to markdown
+        run: python3 ./.github/workflows/find_and_convert.py
+        
+
