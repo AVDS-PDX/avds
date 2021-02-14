@@ -34,7 +34,6 @@ jobs:
 
 
       - name: Commit markdown to branch
-        if: ${{ convert_to_md.outputs.git_diff != 0 }}
         run: |
           DIFF=$(git diff)
           if [[ DIFF != '0' ]]; then
