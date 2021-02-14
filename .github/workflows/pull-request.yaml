@@ -32,22 +32,16 @@ jobs:
         run: | 
           python ./.github/workflows/convert_to_md.py
 
-      - name: Check if Diff
-        id: git_diff
-        run: |
-          git diff
-          echo "::set-output name=git_diff::${?}"
-        outputs:
-          git_diff: ${{steps.git_diff.outputs.git_diff}}
 
       - name: Commit markdown to branch
         if: ${{ convert_to_md.outputs.git_diff != 0 }}
         run: |
+          DIFF=$(git diff)
+          if [[ DIFF != '0' ]]; then
           git add .
           git config --local user.email "commit from ${GITHUB_REF#refs/heads/}"
           git config --local user.name "Github Actions"
           git commit -m "convert to md"
-
           git push origin ${GITHUB_REF#refs/heads/}
-    
+          fi
 
