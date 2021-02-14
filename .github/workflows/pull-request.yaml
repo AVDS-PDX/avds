@@ -1,4 +1,4 @@
-on: [push, pull_request, workflow_dispatch]
+on: [pull_request, workflow_dispatch]
 
 jobs:
   convert-to-markdown:
@@ -31,7 +31,6 @@ jobs:
       - name: Convert docx to markdown
         run: | 
           python ./.github/workflows/convert_to_md.py
-
 
       - name: Commit markdown to branch
         run: |
