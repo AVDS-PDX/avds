@@ -12,3 +12,4 @@ mammoth==1.4.15
 markdownify==0.6.3
 six==1.15.0
 soupsieve==2.2
+mkdocs-material
