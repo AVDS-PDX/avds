@@ -35,11 +35,8 @@ jobs:
       - name: Commit markdown to branch
         run: |
           git diff
-          if [[ $? != '0' ]]; then
           git add .
           git config --local user.email "commit from ${GITHUB_REF#refs/heads/}"
           git config --local user.name "Github Actions"
           git commit -m "convert to md"
           git push origin ${GITHUB_REF#refs/heads/}
-          fi
-
