@@ -1,0 +1,11 @@
+site_name: AVDS Repository
+theme: material
+plugins:
+  - search
+docs_dir: AVDS_repo_markdown
+pages:
+  - Welcome: index.md
+  - 1. README: 01_README.md
+  - 2. Getting Started: 02_Getting started.md
+  - 3. General Strategies: 03_General_strategies.md
+  - 4. Frequently Asked Questions (FAQ): 04_FAQs.md
