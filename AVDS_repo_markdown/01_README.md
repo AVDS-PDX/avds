@@ -6,3 +6,7 @@ The purpose of forming an AVDS repository is so that other groups who are intere
 
 Ultimately, this repo may serve as a foundation for making AVDS a national group with local chapters.
 
+New edit! 
+
+Hooray for me!
+
