@@ -14,3 +14,4 @@ ADD explanation for how to post a comment/issue so that people know how to contr
 
 Add link to comments sections to each page for easy accessibility
 
+Substantial Change!
